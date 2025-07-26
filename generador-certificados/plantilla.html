@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificado - Asignación de Lote</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background: linear-gradient(to right, #003366, #005bac);
+      text-align: center;
+      padding: 25px 0;
+    }
+    .header img {
+      height: 45px;
+    }
+    .content {
+      background: white;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .field {
+      margin-bottom: 15px;
+      font-size: 17px;
+    }
+    .field span {
+      font-weight: bold;
+    }
+    .qr-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .qr-container img {
+      width: 170px;
+      height: 170px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="logo-miviot.webp" alt="Logo Gobierno y MIVIOT">
+  </div>
+  
+  <div class="content">
+    <h1>CERTIFICADO DE ADJUDICACIÓN</h1>
+
+    <div class="field"><span>Código:</span> {{ codigo }}</div>
+    <div class="field"><span>Nombre del Beneficiario:</span> {{ nombre }}</div>
+    <div class="field"><span>Cédula:</span> {{ cedula }}</div>
+    <div class="field"><span>Proyecto Habitacional:</span> {{ proyecto }}</div>
+    <div class="field"><span>Provincia:</span> {{ provincia }}</div>
+    <div class="field"><span>Torre:</span> {{ torre }}</div>
+    <div class="field"><span>Apartamento:</span> {{ apartamento }}</div>
+    <div class="field"><span>Valor:</span> {{ valor }}</div>
+    <div class="field"><span color:black>Resolución:</span> {{ resolucion }}</div>
+
+    <div class="qr-container">
+      <img src="https://www.miviot.gob.pa/verificacion/aapartamentos/salida_qrs/{{ codigo }}.png" alt="QR Code">
+    </div>
+  </div>
+
+
+</body>
+</html>
